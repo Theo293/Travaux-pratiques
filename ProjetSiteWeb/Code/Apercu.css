@@ -1,0 +1,193 @@
+.imageEntrées {
+    height: 400px;
+    background-image: url("Images/EntréesBlur.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+.imagePlats {
+    height: 400px;
+    background-image: url("Images/PlatsBlur.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+.imageDesserts {
+    height: 400px;
+    background-image: url("Images/DessertsBlur.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+h1 {
+    color: white;
+    position: relative;
+    left: 70%;
+    top: 40%;
+    font-size: 50px;
+    font-family: 'before_the_rainregular';
+}
+
+.MiniChaussons {
+    background-image: url("Images/i34423-mini-chaussons-vegetariens-a-l-indienne-aux-epices-sauce-yaourt-et-menthe.png");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.SaladeQuinoa {
+    background-image: url("Images/i123450-salade-vegetarienne-de-quinoa-patate-douce-pois-chiches-et-kale.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Tartines {
+    background-image: url("Images/i131030-tartines-vegetariennes-au-pesto-et-tomates-cerise.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Aumonières {
+    background-image: url("Images/i132862-aumonieres-vegetariennes.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Brouillade {
+    background-image: url("Images/i35942-brouillade-d-oeufs-aux-feves.png");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Calzone {
+    background-image: url("Images/i6430-calzone-vegetarienne.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Courgettes {
+    background-image: url("Images/i136140-recette-vegetarienne-courgette-farcie.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Papillotes {
+    background-image: url("Images/i88011-recette-papillotes-vegetariennes-de-lentilles-au-curry-legumes-feta.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Bourguignon {
+    background-image: url("Images/i132874-bourguignon-vegetarien-au-tofu-et-seitan.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Vichyssoise {
+    background-image: url("Images/i108171-vichyssoise-vegetarien.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.TarteMeringuée {
+    background-image: url("Images/i13844-tarte-au-citron-meringuee.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Fondant {
+    background-image: url("Images/i87130-fondant-chocolat-coeur-coulant.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.PannaCotta {
+    background-image: url("Images/i89982-panna-cotta-vanille-et-citron.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Flan {
+    background-image: url("Images/i97992-flan-patissier.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+.Mousse {
+    background-image: url("Images/i92556-mousse-au-chocolat.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+h4 {
+    color: rgb(118,168,70);
+    text-align: center;
+    position: relative;
+    top: 100px;
+    font-family: 'before_the_rainregular';
+    font-weight: 800;
+}
+
+.col-md-6 {
+    height: 400px;
+}
+
+.paragraphe {
+    text-align: center;
+    color: grey;
+    position: relative;
+    top: 200px;
+}
+
+.p1 {
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width: 766px)
+{
+    h1 {
+        left: 10%;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 576px)
+{
+    h1 {
+        font-size: 1.9em;
+        left: 7%;
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+    h1 {
+        font-size: 1.8em;
+        left: 3%;
+    }
+}
+
+@media screen and (max-width: 346px)
+{
+    h1 {
+        font-size: 1.6em;
+        left: 0%;
+    }
+}

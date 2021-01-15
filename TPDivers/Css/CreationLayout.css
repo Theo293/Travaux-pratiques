@@ -1,0 +1,39 @@
+h1 {
+    color: #C03000;
+}
+
+h2 {
+    color: #4BB5C1;
+}
+
+h3 {
+    color: #C03000;
+}
+
+.contact {
+    color: #0000FF;
+}
+
+li {
+    background-color: #660000;
+    border: 1px solid #C03000;
+    display: inline;
+    list-style: none;
+    text-align: center;
+    margin: 0px 10px 0px 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+li:hover, li a:focus {
+    background-color: #009900;
+}
+
+div {
+    background-color: #EFECCA;
+    width: 800px;
+    height: 440px;
+}

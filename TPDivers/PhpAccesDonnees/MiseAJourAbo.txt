@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP03</title>
+</head>
+<body>
+    <?php
+            if(isset($_POST['nom']) && isset($_GET['id']))
+            {
+                $nom = $_POST['nom']; $prenom = $_POST['prenom']; $dateNaissance = $_POST['date_naissance'];
+                $ville = $_POST['ville']; $abonneId = $_GET["id"];
+                // Connexion avec la base de données
+                $connexion = new mysqli('localhost', 'root', '', 'Données', '3306') ;
+                // Vérification du succès de la commande 'mysqli'
+                if($connexion->connect_error)
+                {
+                    echo "Erreur lors de la connexion avec la base de données";
+                    die;
+                }
+                $resultat = $connexion->query('UPDATE abonne SET nom="' . $nom . '", prenom="' . $prenom . 
+                '", date_naissance="' . $dateNaissance . '", ville="' . $ville . '" WHERE id=' . $abonneId .
+                ';');
+                // Vérification du succès de la commande '$connexion->query'
+                if($resultat === false)
+                {
+                    echo "Erreur lors de la mise à jour de la base de données";
+                    die;
+                }
+                // Indique si l'update de la base de données a réussie
+                echo "Mise à jour de l'abonné portant l'id " . $abonneId . " réussie";
+                echo "<form action='TP03.php?id=12' method='POST'>
+                <label for='nom'>Nom : </label>
+                <input type='text' name='nom' id='nom' value=$nom>
+                <br>
+                <label for='prenom'>Prénom : </label>
+                <input type='text' name='prenom' id='prenom' value=$prenom>
+                <br>
+                <label for='date_naissance'>Date de naissance : </label>
+                <input type='date' name='date_naissance' id='date_naissance' value=$dateNaissance>
+                <br>
+                <label for='ville'>Ville : </label>
+                <input type='text' name='ville' id='ville' value=$ville>
+                <br>
+                <input type='submit' value='Valider'>
+                </form>";
+            }
+            else
+            {
+                // Affichage du formulaire
+                echo "<form action='TP03.php?id=12' method='POST'>
+                <label for='nom'>Nom : </label>
+                <input type='text' name='nom' id='nom'>
+                <br>
+                <label for='prenom'>Prénom : </label>
+                <input type='text' name='prenom' id='prenom'>
+                <br>
+                <label for='date_naissance'>Date de naissance : </label>
+                <input type='date' name='date_naissance' id='date_naissance'>
+                <br>
+                <label for='ville'>Ville : </label>
+                <input type='text' name='ville' id='ville'>
+                <br>
+                <input type='submit' value='Valider'>
+                </form>";
+            }
+    ?>
+</body>
+</html>

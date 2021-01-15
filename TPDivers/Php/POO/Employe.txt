@@ -1,0 +1,125 @@
+<?php
+    Class Employe 
+    {
+
+        private $matricule;
+        private $nom;
+        private $prenom;
+        private $dateNaissance;
+        private $dateEmbauche;
+        private $salaire;
+
+        public function setMatricule($newMatricule) {
+            $this->matricule = $newMatricule;
+        }
+
+        public function getMatricule() {
+            return $this->matricule;
+        }
+
+        public function setNom($newNom) {
+            $this->nom = $newNom;
+        }
+
+        public function getNom() {
+            return $this->nom;
+        }
+
+        public function setPrenom($newPrenom) {
+            $this->prenom = $newPrenom;
+        }
+
+        public function getPrenom() {
+            return $this->prenom;
+        }
+
+        public function setDateNaissance($newDateNaissance) {
+            $this->dateNaissance = $newDateNaissance;
+        }
+
+        public function getDateNaissance() {
+            return $this->dateNaissance;
+        }
+
+        public function setDateEmbauche($newDateEmbauche) {
+            $this->dateEmbauche = $newDateEmbauche;
+        }
+
+        public function getDateEmbauche() {
+            return $this->dateEmbauche;
+        }
+
+        public function setSalaire($newSalaire) {
+            $this->salaire = $newSalaire;
+        }
+
+        public function getSalaire() {
+            return $this->salaire;
+        }
+
+        public function getAge() {
+            $dateNaissance = date_create($this->getDateNaissance());
+            $dateActuelle = new DateTime("now");
+            $age = date_diff($dateNaissance, $dateActuelle);
+            return $age->format("%Y");
+        }
+
+        public function Anciennete() {
+            $dateEmbauche = date_create($this->getDateEmbauche());
+            $dateActuelle = new DateTime("now");
+            $anciennete = date_diff($dateEmbauche, $dateActuelle);
+            return $anciennete->format("%Y");
+        }
+
+        public function AugmenterSalaire (){
+            $anciennete = $this->Anciennete();
+            if($anciennete < 5)
+            {
+                $this->salaire *= 1.02;
+            }
+            else if($anciennete < 10)
+            {
+                $this->salaire *= 1.05;
+            }
+            else
+            {
+                $this->salaire *= 1.1;
+            }
+        }
+
+        public function AfficherEmploye() {
+            $premiereL = mb_substr($this->prenom, 0, 1);
+            $prenomSuite = mb_substr($this->prenom, 1, null);
+            $prenom = mb_strtoupper($premiereL) . $prenomSuite;
+            $nom = mb_strtoupper($this->nom);
+            echo "<br>Matricule : " . $this->matricule . "<br>";
+            echo "Nom Prenom : " . $nom . " " . $prenom . "<br>";
+            echo "Age : " . $this->getAge() . " ans<br>";
+            echo "Ancienneté : " . $this->Anciennete() . " ans<br>";
+            echo "Salaire : " . $this->salaire . " euros";
+        }
+    }
+
+    $employe = new Employe();
+
+    $employe->setNom('Mathias');
+    $employe->setPrenom('théo');
+    $employe->setDateNaissance('2000-12-27');
+    $employe->setDateEmbauche('2004-05-12');
+    $employe->setSalaire(100);
+
+    echo $employe->getPrenom() . ' ' . $employe->getNom();
+    echo '<br/>';
+    echo $employe->getDateNaissance();
+    echo '<br/>';
+    echo $employe->getAge();
+    echo '<br/>';
+    echo $employe->getDateEmbauche();
+    echo '<br/>';
+    echo $employe->Anciennete();
+    echo '<br/>';
+    $employe->AugmenterSalaire();
+    echo $employe->getSalaire();
+    $employe->AfficherEmploye();
+    
+?>

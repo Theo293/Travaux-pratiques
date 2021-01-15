@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP02</title>
+</head>
+<body>
+    <?php
+        if(isset($_GET["id"]))
+        {
+            // Affectation de l'id dans la variable "abonneId"
+            $abonneId = $_GET["id"];
+            // Connexion avec la base de données
+            $connexion = new mysqli('localhost', 'root', '', 'Données', '3306') ;
+            // Vérification du succès de la commande 'mysqli'
+            if($connexion->connect_error)
+            {
+                echo "Erreur lors de la connexion avec la base de données";
+                die;
+            }
+            $resultat = $connexion->query('SELECT * FROM abonne WHERE id =' .  $abonneId . ';') ;
+            // Vérification du succès de la commande '$connexion->query'
+            if($resultat === false)
+            {
+                echo "Erreur lors de la récupération des données";
+                die;
+            }
+            $row = $resultat->fetch_array(MYSQLI_ASSOC);
+            // Vérification du succès de la commande 'fetch_array'
+            if($row === false)
+            {
+                echo "Cet abonné n'existe pas";
+                die;
+            }
+            // Affichage des informations de l'abonné
+            echo "Informations de l'abonné n°" . $abonneId . "<br>" . "Prénom : " . $row['prenom'] . "<br>" .
+             "Nom : " . $row['nom'] . "<br>" . "Date de naissance : " . $row['date_naissance'] . "<br>" .
+              "Ville : " . $row['ville'];
+        }
+        else 
+        {
+            echo '<a href="TP02.php?id=12">Abonné</a>';
+        }
+    ?>
+</body>
+</html>

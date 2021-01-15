@@ -1,0 +1,69 @@
+<?php
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP28</title>
+</head>
+<body>
+    <?php
+        $tableau = ["Theo" => "12345", "FFFFF" => "98765"]; $validation = true; 
+        $formulaire = "<form action='TP28.php' method='POST'>
+        <label for='Id'>Identifiant : </label>
+        <input type='text' name='Id' id='Id'>
+        <br>
+        <label for='Mdp'>Mot de passe : </label>
+        <input type='password' name='Mdp' id='Mdp'>
+        <br>
+        <input type='submit' value='Valider'>
+        </form>";
+
+        if(!isset($_SESSION["user"]))
+        {
+            if(isset($_POST["Id"]) && isset($_POST["Mdp"]))
+            {
+                $Id = $_POST["Id"];
+                $Mdp = $_POST["Mdp"];
+
+                if(isset($tableau[$Id]))
+                    if($tableau[$Id] !== $Mdp)
+                    {
+                        echo "Mot de passe incorrect";
+                        $validation = false;
+                    }
+                else
+                {
+                    echo "Identifiant incorrect";
+                    $validation = false;
+                }
+
+                if($validation)
+                {
+                    echo "Connexion réussie !";
+                    $_SESSION["user"] = "$Id";
+                }
+            }
+            else
+            {
+                echo $formulaire;
+            }
+        }
+        else if(isset($_POST['Déconnexion']))
+        {
+            session_destroy();
+            echo $formulaire;
+        }
+        else
+        {
+            echo  "Bonjour ". $_SESSION['user'];
+            echo "<br>";
+            echo "<form action='TP28.php' method='POST'>
+            <input type='submit' name='Déconnexion' value='Déconnexion'>
+            </form>";
+        }
+    ?>
+</body>
+</html>

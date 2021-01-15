@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP26</title>
+</head>
+<body>
+    </form>
+    <?php
+        $tableau = ["Theo" => "12345", "FFFFF" => "98765"]; $validation = true;
+
+        if(isset($_POST["Id"]) && isset($_POST["Mdp"]))
+        {
+            $Id = $_POST["Id"];
+            $Mdp = $_POST["Mdp"];
+
+            if(!isset($tableau[$Id]) || $tableau[$Id] !== $Mdp)
+            {
+                echo "<form action='TP26.php' method='POST'>
+                <label for='Id'>Identifiant : </label>
+                <input type='text' name='Id' id='Id' value=$Id>
+                <br>
+                <label for='Mdp'>Mot de passe : </label>
+                <input type='password' name='Mdp' id='Mdp'>
+                <br>
+                <input type='submit' value='Valider'>";
+                echo "<br><span style='color: red;'>Identifiant ou mot de passe invalide</span>";
+                $validation = false;
+            }
+        
+
+            if($validation)
+                echo "Connexion réussie !";
+        }
+        else
+        {
+            echo "<form action='TP26.php' method='POST'>
+            <label for='Id'>Identifiant : </label>
+            <input type='text' name='Id' id='Id'>
+            <br>
+            <label for='Mdp'>Mot de passe : </label>
+            <input type='password' name='Mdp' id='Mdp'>
+            <br>
+            <input type='submit' value='Valider'>";
+        }
+    ?>
+</body>
+</html>

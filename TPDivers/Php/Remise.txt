@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP08</title>
+</head>
+<body>
+    <?php
+        $nb = 1;
+        while ($nb % 10 != 0)
+            $nb = rand(100, 8000);
+        if($nb < 1000)
+        {
+            echo "Vous n'avez pas le droit à de remise";
+        }
+        else if($nb >= 1000 && $nb < 2000)
+        {
+            $remise = $nb * 0.01;
+            $nb = $nb - $nb * 0.01;
+            echo "La remise de 1% vous fait économiser $remise euros. <br>Le montant est maintenant de $nb euros";
+        }
+        else if($nb >= 2000 && $nb < 5000)
+        {
+            $remise = $nb * 0.03;
+            $nb = $nb - $nb * 0.03;
+            echo "La remise de 3% vous fait économiser $remise euros. <br>Le montant est maintenant de $nb euros";
+        }
+        else if($nb >= 5000)
+        {
+            $remise = $nb * 0.05;
+            $nb = $nb - $nb * 0.05;
+            echo "La remise de 5% vous fait économiser $remise euros. <br>Le montant est maintenant de $nb euros";
+        }
+    ?>
+</body>
+</html>

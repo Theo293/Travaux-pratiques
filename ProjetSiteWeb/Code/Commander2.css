@@ -1,0 +1,268 @@
+.flexOl {
+    display: flex;
+    color: black;
+    margin: 0px auto;
+    height: 70px;
+    font-size: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 0px;
+    box-shadow: 3px 3px 50px grey;
+}
+
+
+.flexOl li {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    text-align: center;
+    padding-top: 17px;
+    border-collapse: collapse;
+}
+
+.colorBli li:nth-child(2)
+{
+    background-color: rgb(118,168,70);
+    color: white;
+}
+
+.colorB li:nth-child(4)
+{
+    background-color: rgb(118,168,70);
+    color: white;
+}
+
+.rowEtape h2 {
+    position: relative;
+    left: 3%;
+    margin-top: 25px;
+    font-size: 27px;
+}
+
+.form form {
+    background-color: rgb(240, 240, 240);
+    height: 500px;
+    padding-top: 40px;
+    margin-left: 5%;
+    margin-bottom: 40px;
+}
+
+.form #nom, .form #prenom, .form #Email, .form #telephone, .form label {
+    width: 40%;
+    margin: 0px auto;
+    display: block;
+}
+
+.form #nom, .form #prenom, .form #Email, .form #telephone {
+    border: 0px;
+    border-bottom: 1px solid black;
+    background-color: rgb(240, 240, 240);
+}
+
+a {
+    left: 0x;
+    margin: 0px;
+}
+
+.form #Suite {
+    background-color: rgb(118,168,70);
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    border: 0px;
+    display: block;
+    width: 35%;
+    height: 100%;
+    border-radius: 2px;
+    position: relative;
+    left: 20%;
+    top: 80px;
+}
+
+.form .retour, .form .annuler {
+    display: block;
+    position: relative;
+    top: 80px;
+    width: 35%;
+    text-align: center;
+    padding-top: 9px;
+    left: 10%;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: rgb(76,76,76);
+    color: white;
+    border-radius: 2px;
+}
+
+.form .annuler {
+    width: 50%;
+}
+
+.recapBack {
+    background-color: rgb(240, 240, 240);
+    margin: 0px auto;
+}
+
+.recapH2 {
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(118,168,70);
+}
+
+.recapBack h3 {
+    color: rgb(118,168,70);
+    font-size: 43px;
+}
+
+.recapBack {
+    font-size: 20px;
+}
+
+.marginRow {
+    margin-bottom: 20px;
+}
+
+.recapBack .total {
+    padding: 0px;
+}
+
+#Recap {
+    background-color: rgb(118,168,70);
+    border: 0px;
+    width: 70%;
+    height: 100%;
+    border-radius: 3px;
+    position: relative;
+    bottom: 40%;
+    color: white;
+    left: 35%;
+}
+
+.retourRecap {
+    display: block;
+    background-color: rgb(76,76,76);
+    width: 80%;
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 7px;
+    position: relative;
+    bottom: 40%;
+    left: 70%;
+}
+
+.retourRecap:hover {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 992px)
+{
+    .colorB li {
+        font-size: 0.9em;
+    }
+
+    .retourRecap {
+        left: 0%;
+        width: 40%;
+        margin: 0px auto;
+        margin-bottom: 5px;
+    }
+
+    #Recap {
+        left: 0%;
+        width: 40%;
+        height: 150%;
+        position: relative;
+        bottom: 70%;
+    }
+
+    .centerValider {
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 900px)
+{
+    .colorBli li {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .colorBli li {
+        font-size: 0.7em;
+    }
+
+    .form .annuler {
+        top: 0px;
+        width: 37%;
+        left: 30%;
+        margin: 0px;
+    }
+
+    .form .retour {
+        position: absolute;
+        width: 35%;
+        top: 14px;
+        left: 31%;
+    }
+
+    .form #Suite {
+        top: 79px;
+        left: 31%;
+        width: 35%;
+        height: 50px;
+    }
+
+    .form form {
+        height: 570px;
+    }
+
+    .colorB li, .recapBack p {
+        font-size: 0.7em;
+    }
+
+    .total {
+        width: 100px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 440px)
+{
+    .colorBli li {
+        font-size: 0.6em;
+    }
+
+
+    .form form {
+        height: 550px;
+        margin: 0px;
+    }
+
+    .retourRecap {
+        width: 55%;
+    }
+
+    #Recap {
+        width: 55%;
+    }
+
+    .colorB li {
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+    .colorBli li {
+        font-size: 0.5em;
+    }
+
+}

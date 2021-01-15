@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP24</title>
+</head>
+<body>
+    <?php
+        $articleId = 0;
+
+        if(isset($_GET["id"]))
+        {
+            $articleId = $_GET["id"];
+
+            echo "Vous avez sélectionné l'article n°$articleId";
+
+            echo "<a href='TP24.php'><br><br>Retour</a>";
+        }
+        else 
+        {
+            echo '<li>chemise <a href="TP24.php?id=1">ajouter</a></li>';
+            echo '<li>pantalon <a href="TP24.php?id=2">ajouter</a></li>';
+            echo '<li>short <a href="TP24.php?id=3">ajouter</a></li>';
+            echo '<li>veste <a href="TP24.php?id=4">ajouter</a></li>';
+        }
+    ?>
+</body>
+</html>

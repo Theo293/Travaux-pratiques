@@ -1,0 +1,415 @@
+.imageCommander {
+    background-image: url("Images/restoran_kafe_pribory_stoly_stulya_interer_dizayn_39216_1920x1080.jpg");
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+
+.titre {
+    margin: auto;
+    color: white;
+    font-family: 'before_the_rainregular';
+    font-weight: 800;
+}
+
+.Titre {
+    font-size: 33px;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    top: 20px;
+    font-family: 'before_the_rainregular';
+}
+
+.colorTitre {
+    color: rgb(118,168,70);
+    font-family: 'before_the_rainregular';
+    font-weight: 800;
+    position: relative;
+    top: 1%;
+}
+
+.heightDiv1 {
+    height: 350px;
+}
+
+.paragraphe {
+    margin: 0px auto;
+}
+
+.menu1 {
+    background-image: url("Images/IMG_21191.png");
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    margin-left: 20px;
+    z-index: 2;
+}
+
+.menu2 {
+    background-image: url("Images/photoresto5.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    z-index: 2;
+    margin-right: 20px;
+}
+
+.menu3 {
+    background-image: url("Images/vegan-mafia-carte-vege-vegan-paris.jpg");
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    margin-left: 20px;
+    z-index: 2;
+}
+
+.backGrey {
+    background-color: rgb(247, 247, 247);
+    box-shadow: 3px 3px 50px grey;
+}
+
+.backGrey h4 {
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: 43px;
+}
+
+.backGrey span {
+    font-size: 24px;
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.backGrey div {
+    margin-left: 30px;
+    margin-top: 30px;
+    color: grey;
+    font-size: 15px;
+    height: 300px;
+}
+
+.backGrey li {
+    margin: 5px 0px;
+}
+
+.backGrey a {
+    display: block;
+    text-align: center;
+    width: 250px;
+    margin-top: 0px;
+    left: -15px;
+    top: 100px;
+    padding-top: 12px;
+    height: 55px;
+    border: 2px solid rgb(118,168,70);
+    margin: 0px auto;
+    color: rgb(118,168,70);
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.backGrey a:hover {
+    text-decoration: none;
+    animation-name: colorBackground;
+    animation-duration: 0.4s;
+    color: white;
+    animation-fill-mode: forwards;
+}
+
+.row1 {
+    margin-bottom: 120px;
+}
+
+.commanderBack {
+    height: 500px;
+    background-color: rgb(247, 247, 247);
+    margin: 0px auto;
+    margin-bottom: 100px;
+    box-shadow: 3px 3px 16px grey;
+}
+
+.form {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.form select {
+    margin-bottom: 20px;
+}
+
+.ligne {
+    height: 1px;
+    border: 1px solid rgb(118,168,70);
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+#date {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.button {
+    display: block;
+    height: 50px;
+    width: 190px;
+    margin-top: 70px;
+    position: relative;
+    left: -20px;
+    height: 50px;
+}
+
+#continue {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(118,168,70);
+    background-color: rgb(118,168,70);
+    color: rgb(247, 247, 247);
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    bottom: 50%;
+}
+
+.button:hover {
+    animation-name: sizeAnimation;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+#continue:hover {
+    animation-name: sizeAnimation;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.h3 h3 {
+    color: rgb(118,168,70);
+    margin: 0px auto;
+    width: 450px;
+    font-size: 35px;
+    font-family: 'before_the_rainregular';
+    font-weight: 800;
+}
+
+.h3 {
+    margin-bottom: 40px;
+}
+
+.reserver {
+    height: 450px;
+    background-color: rgb(76,76,76);
+    margin-bottom: 100px;
+}
+
+.reservation h5 {
+    width: 20%;
+    margin: 0px auto;
+    position: relative;
+    font-size: 43px;
+    color: rgb(220, 220, 220);
+    margin-top: 20px;
+    font-family: 'before_the_rainregular';
+    font-weight: 800;
+    top: 10%;
+}
+
+.reservation p {
+    color: rgb(220, 220, 220);
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 95px;
+    font-size: 1.3em;
+}
+
+.reservation a {
+    text-align: center;
+    display: block;
+    text-align: center;
+    width: 250px;
+    left: 0px;
+    padding-top: 12px;
+    height: 55px;
+    border: 2px solid rgb(118,168,70);
+    margin: 0px auto;
+    color: rgb(118,168,70);
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 104px;
+}
+
+.reservation a:hover {
+    animation-name: colorBackground;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    text-decoration: none;
+}
+
+.cible {
+    text-align: center;
+}
+
+.cible div {
+    position: relative;
+    top: 60%;
+    width: 70%;
+    font-size: 30px;
+}
+
+.marginLeft {
+    margin-left: 30px;
+}
+
+.heure {
+    position: relative;
+    left: 10%;
+    top: 15%;
+}
+
+@keyframes colorBackground{
+    0% {
+
+    }
+
+    100% {
+        background-color: rgb(118,168,70);
+        color: white;
+    }
+}
+
+@keyframes sizeAnimation {
+    0% {
+
+    }
+
+    100% {
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        left: -10px;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    .reservation h5 {
+        left: -33px;
+    }
+
+    .reservation a {
+        margin-top: 90px;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .colorTitre {
+        top: 0px;
+    }
+
+    .row .backGrey {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .menu1, .menu3 {
+        margin-right: 20px;
+    }
+
+    .backGrey a {
+        top: 0px;
+    }
+
+    .menu2 {
+        margin-left: 20px;
+    }
+
+    .commanderBack {
+        margin: 0px 20px;
+    }
+
+    .reservation h5 {
+        left: -73px;
+    }
+
+    .reservation a {
+        margin-top: 50px;
+    }
+
+    .reservation p {
+        font-size: small;
+    }
+
+    .reserver {
+        margin-top: 30px;
+    }
+
+    .marginLeft {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 630px)
+{
+    .marginLeft {
+        position: relative;
+        width: 300px;
+        margin: 0px auto;
+    }
+}
+
+@media screen and (max-width: 576px)
+{
+    .colorTitre {
+        font-weight: 500;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 440px)
+{
+    .heightDiv1 {
+        height: 540px;
+    }
+
+    .menu1, .menu2, .menu3 {
+        height: 400px;
+        margin: 0px;
+    }
+
+    .h3 h3 {
+        margin: 0px auto;
+        width: 70%;
+        font-size: 23px;
+    }
+
+    .row .backGrey {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .marginLeft {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+    #continue {
+        position: relative;
+        top: -30px;
+    }
+
+    .commanderBack 
+    {
+        height: 600px;
+    }
+    
+    .heightMenu3 {
+        height: 586px;
+    }
+}

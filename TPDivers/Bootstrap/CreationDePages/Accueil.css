@@ -1,0 +1,75 @@
+body, html {
+    background-color: #F8F9FF;
+    height: 100%;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    margin: 10px;
+}
+
+.Footer {
+    height: 50%;
+}
+
+.Image1 {
+    background-image: url("competences-agence-web-5a6e.jpg");
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+
+.Titre {
+    font-weight: bold;
+    font-size:90px;
+    font-family: roboto;
+}
+
+.ParagrapheUn {
+    font-size: 20px;
+}
+
+.Image2 {
+    background-image: url("beige_creme.jpg");
+    height: 340px;
+}
+
+.Image3 {
+    background-image: url("cross-platform.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 340px;
+}
+
+.TitreTaille {
+    height: 20px;
+    position: relative;
+    top: 264px;
+    font-size: 50px;
+}
+
+.ParagrapheDeux {
+    width: 65%;
+    position: relative;
+    left: 100px;
+    text-align: justify;
+    top: 50px;
+}
+
+.FooterTaille {
+    height: 79px;
+    background-color: #D1BCC6;
+}
+
+.ParagrapheUn, .ParagrapheDeux, ul li {
+    font-family: "Open Sans";
+}
+
+#Focus {
+    background-color: #B6CED1;
+    border-radius: 14px;
+}

@@ -1,0 +1,55 @@
+<?php
+    Class Batiment {
+
+        private $adresse;
+
+        function __construct($adresse)
+        {
+            $this->adresse = $adresse;
+        }
+
+        public function setAdresse($newAdresse) {
+            $this->adresse = $newAdresse;
+        }
+
+        public function getAdresse() {
+            return $this->Adresse;
+        }
+
+        function AfficherBatiment() {
+            echo "Bâtiment situé à " . $this->adresse;
+        }
+    }
+
+    Class Maison extends Batiment {
+
+        private $nombrePieces;
+
+        function __construct($adresse, $nombrePieces)
+        {
+            parent::__construct($adresse);
+            $this->nombrePieces = $nombrePieces;
+        }
+
+        public function setNombrePieces($newNombrePieces) {
+            $this->NombrePieces = $newNombrePieces;
+        }
+
+        public function getNombrePieces() {
+            return $this->NombrePieces;
+        }
+
+        public function AfficherBatiment()
+        {
+            parent::AfficherBatiment();
+            echo " de " . $this->nombrePieces . " pièces.";
+        }
+
+    }
+
+    $batiment = new Batiment("1 Place Poblet, 34070");
+    $batiment->AfficherBatiment();
+    echo "<br>";
+    $maison = new Maison("1 Place poblet, 34070", 5);
+    $maison->AfficherBatiment();
+?>

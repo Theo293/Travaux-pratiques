@@ -1,0 +1,120 @@
+.backGrey {
+    background-color: rgb(240, 240, 240);
+    height: 500px;
+    margin: 20px auto;
+}
+
+h1 {
+    font-family: 'before_the_rainregular';
+    color: rgb(118 ,168 ,70);
+    width: 90%;
+    margin: 20px auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.height {
+    height: 140px;
+    margin-top: 200px;
+}
+
+.validationReserver:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.emplacementDate {
+    position: relative;
+    top: 100px;
+    left: 35%;
+}
+
+.form {
+    padding-left: 17%;
+    padding-top: 2%;
+}
+
+.form label {
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(118 ,168 ,70);
+    margin: 0px;
+}
+
+.errorCible {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    background-color: rgba(194, 3, 3, 0.973);
+    border-radius: 3px;
+    color: white;
+}
+
+.validationReserver {
+    display: block;
+    margin: 0px auto;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: rgb(118 ,168 ,70);
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0px;
+    height: 50px;
+}
+
+.form span {
+    display: block;
+    height: 25px;
+    width: 90%;
+    text-align: center;
+}
+
+.error {
+    background-color: rgba(194, 3, 3, 0.973);
+    border-radius: 3px;
+    color: white;
+    margin-top: 5px;
+}
+
+.dateError {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+@media screen and (max-width: 991px)
+{
+    .backGrey {
+        height: 700px;
+    }
+
+    .emplacementDate {
+        left: 15%;
+        top: 75%;
+    }
+
+    .validationReserver {
+        position: relative;
+        bottom: 140%;
+    }
+
+    .dateError {
+        top: 7%;
+        left: 17%;
+    }
+
+    .errorCible {
+        left: 14%;
+        top: 15%;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    .validationReserver {
+        width: 50%;
+    }
+}

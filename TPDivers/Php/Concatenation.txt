@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP07</title>
+</head>
+<body>
+    <?php
+        $c = "J'ai acheté ";
+        $n = rand(1, 12);
+        $c = $c.$n;
+        $n > 1 ? $c = $c." melons" : $c = $c." melon";
+        echo $c;
+    ?>
+</body>
+</html>

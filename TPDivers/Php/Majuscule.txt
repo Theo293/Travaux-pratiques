@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP18</title>
+</head>
+<body>
+    <?php
+        function majusculeL ($ch) {
+            $nb = 0; $caractere;
+            $nb = ord($ch[0]);
+            $nb -= 32;
+            $caractere = chr($nb);
+            $ch[0] = $caractere;
+        
+            return $ch;
+        }
+
+        function majusculePhrase($ch) {
+            $mot = explode(' ', $ch); $alphab = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
+                , "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]; $Booleen = false;
+            
+            for ($i = 0; $i < count($mot); $i++) {
+                for ($o = 0; $o < count($alphab); $o++) {
+                    if ($mot[$i][0] == $alphab[$o])
+                        $Booleen = true;
+                }
+        
+                if (!$Booleen)
+                    $mot[$i] = majusculeL($mot[$i]);
+        
+                $Booleen = false;
+            }
+        
+            $ch = $mot[0] . " ";
+            for ($i = 1; $i < count($mot); $i++) {
+                if ($i + 1 != count($mot))
+                    $ch .= $mot[$i] . " ";
+                else
+                    $ch .= $mot[$i];
+            }
+        
+            return $ch;
+        }
+        
+        $chaine = "Comment ca va";
+        
+        $chaine = majusculePhrase($chaine);
+        
+        echo $chaine;
+    ?>
+</body>
+</html>

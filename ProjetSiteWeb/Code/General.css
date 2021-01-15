@@ -1,0 +1,196 @@
+.container-fluid {
+    padding: 0px;
+    margin: 0px;
+}
+
+.row {
+    margin: 0px;
+    padding: 0px;
+}
+
+ol {
+    margin-right: 8%;
+}
+
+html, body {
+    width: 100%;
+}
+
+img {
+    width: 92px;
+    height: 72px;
+    position: absolute;
+    right: 145px;
+    bottom: -6px;
+}
+
+a {
+    position: relative;
+    left: 55px;
+    margin-top: 10px;
+    height: 50px;
+}
+
+.footer {
+    list-style-type: none;
+    margin: 0px 30px;
+    width: 20%;
+}
+
+.FooterHeight {
+    height: 90px;
+    padding-top: 40px;
+}
+
+.ulFlex {
+    display: flex;
+    width: 100%;
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+.widthLi {
+    width: 200px;
+} 
+
+.colorF {
+    color: white;
+    left: 0px;
+}
+
+#Adresse {
+    height: 30px;
+    color: rgb(118,168,70);
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0px auto;
+    font-size: 20px;
+    top: 10px;
+    position: relative;
+    padding-top: 5px;
+}
+
+#Adresse, .textF, .positionA {
+    padding-top: 10px;
+}
+
+.positionA {
+    position: relative;
+    top: 10px;
+    height: 14px;
+}
+
+.textF, .positionA {
+    font-size: 14px;
+    color: white;
+}
+
+.black {
+    background-color: rgba(0, 0, 0, 0.884);
+    height: 120px;
+}
+
+.textF, .positionA {
+    margin-bottom: 20px;
+}
+
+.adressePosition {
+    position: relative;
+    left: 60%;
+}
+
+.colorF:hover {
+    text-decoration: none;
+    color: white;
+}
+
+div a {
+    margin: 0px;
+    left: 50px;
+}
+
+.black img {
+    width: 40px;
+    height: 40px;
+}
+
+.lienI {
+    display: flex;
+}
+
+.alignAdresse {
+    text-align: center;
+}
+
+* {
+    font-family: 'birds_of_paradise__personalRg';
+}
+
+@font-face {
+    font-family: 'before_the_rainregular';
+    src: url('Police/beforetherain_personal_use_demo-webfont.woff2') format('woff2'),
+         url('Police/beforetherain_personal_use_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'birds_of_paradise__personalRg';
+    src: url('birds_of_paradise__personal_use_only-webfont.woff2') format('woff2'),
+         url('birds_of_paradise__personal_use_only-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (max-width: 996px)
+{
+    .colorF {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .colorF {
+        font-size: medium;
+    }
+
+    .footer {
+        margin: 10px auto;
+        width: 50%;
+        text-align: center;
+        position: relative;
+        left: -4%;
+    }
+
+    .ulFlex {
+        flex-direction: column;
+    }
+
+    .black {
+        background-color: rgba(0, 0, 0, 0.884);
+        height: 300px;
+    }
+
+    .adressePosition {
+        left: 0%;
+        top: 10%;
+    }
+
+    ol a {
+        left: 10px;
+    }
+    
+    .black img {
+        position: relative;
+        bottom: 47px;
+        padding: 6px;
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+    .footer {
+        width: 250px;
+        left: -30px;
+    }
+}

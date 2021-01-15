@@ -1,0 +1,15 @@
+img {
+    width: 60px;
+}
+
+.row:nth-child(1), .row:nth-child(3) {
+    height: 150px;
+}
+
+.row:nth-child(2) {
+    height: 75px;
+}
+
+body {
+    background-color: yellow;
+}

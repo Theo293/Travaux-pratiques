@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP03</title>
+</head>
+<body>
+    <?php
+
+    if(isset($_POST["Valider"]))
+    {
+        Class ValidForm {
+
+            public function ValiderValeur($type, $valeur) {
+    
+                if($type == "non_vide")
+                    $valeurRetour = $this->NomVide($valeur);
+                else if($type == "num")
+                    $valeurRetour = $this->Numerique($valeur);
+                else if($type == "email")
+                    $valeurRetour = $this->Email($valeur);
+
+                return $valeurRetour;
+            }
+    
+            private function NomVide($valeurR) {
+                if(!empty($valeurR))
+                    return true;
+                else
+                    return false;
+            }
+    
+            private function Numerique($valeurR) {
+                if(ctype_digit($valeurR))
+                    return true;
+                else
+                    return false;
+            }
+    
+            private function Email($valeurR) {
+
+                if(!empty($valeurR))
+                {
+                        if(filter_var($valeurR, FILTER_VALIDATE_EMAIL)) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                } else
+                    return false;
+            }
+        }
+
+        $nom = $_POST["nom"]; $numeriqueTest = $_POST["numerique"]; $email = $_POST["email"];
+        $valider = new ValidForm();
+        $nomValide = $valider->ValiderValeur("non_vide", $nom);
+        $numerique = $valider->ValiderValeur("num", $numeriqueTest);
+        $emailValide = $valider->ValiderValeur("email", $email);
+
+        if(!$nomValide)
+            echo "Le nom est vide";
+        else
+            echo "Nom valide";
+
+        echo "<br>";
+
+        if($numerique)
+            echo "Cette valeur est numérique";
+        else
+            echo "Cette valeur n'est pas numérique";
+
+        echo "<br>";
+
+        if($emailValide)
+            echo "L'email est valide";
+        else
+            echo "L'email n'est pas valide";
+
+    } else {
+    ?>
+    <form action="TP03.php" method="POST">
+        <label for="nom">Nom : </label>
+        <input type="text" name="nom" id="nom">
+        <br>
+        <label for="numerique">Numerique : </label>
+        <input type="text" name="numerique" id="numerique">
+        <br>
+        <label for="email">Email : </label>
+        <input type="text" name="email" id="email">
+        <input type="submit" name="Valider" value="Valider">
+    </form>
+    <?php
+    }
+    ?>
+</body>
+</html>

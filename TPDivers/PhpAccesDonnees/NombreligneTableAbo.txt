@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP01</title>
+</head>
+<body>
+    <?php
+        // Connexion avec la base de données
+        $connexion = new mysqli('localhost', 'root', '', 'Données', '3306');
+        // Vérification du succès de la commande 'mysqli'
+        if($connexion->connect_error)
+        {
+            echo "Erreur lors de la connexion avec la base des données";
+            die;
+        }
+        $resultat = $connexion->query('SELECT COUNT(id) AS id FROM abonne;');
+        $row = $resultat->fetch_array(MYSQLI_ASSOC);
+        // Affichage de l'id
+        echo "Résultat : " . $row['id'];
+    ?>
+</body>
+</html>

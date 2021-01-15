@@ -1,0 +1,60 @@
+<?php
+    Class Rectangle {
+
+        private $longueur;
+        private $largeur;
+
+        function __construct($longueur, $largeur)
+        {
+            $this->longueur = $longueur;
+            $this->largeur = $largeur;
+        }
+
+        public function setLongueur($newLongueur) {
+            $this->longueur = $newLongueur;
+        }
+
+        public function getLongueur() {
+            return $this->longueur;
+        }
+
+        public function setLargeur($newLargeur) {
+            $this->largeur = $newLargeur;
+        }
+
+        public function getLargeur() {
+            return $this->largeur;
+        }
+
+        public function Perimetre() {
+            $perimetre = $this->longueur * 2 + $this->largeur * 2;
+            return $perimetre;
+        }
+
+        public function Aire() {
+            $aire = $this->longueur * $this->largeur;
+            return $aire;
+        }
+
+        public function EstCarre() {
+            if($this->longueur == $this->largeur)
+                return 0;
+            else
+                return -1;
+        }
+
+        public function AfficherRectangle() {
+            echo "Rectangle de dimension " . $this->longueur . " x " . $this->largeur;
+        }
+
+    }
+
+    $rectangle = new Rectangle(20, 10);
+    echo "Le périmètre du rectangle est : " . $rectangle->Perimetre() . "<br>";
+    echo "L'aire du rectangle est : " . $rectangle->Aire() . "<br>";
+    if($rectangle->EstCarre() == 0)
+        echo "C'est un carré" . "<br>";
+    else
+        echo "Ce n'est pas un carré" . "<br>";
+    $rectangle->AfficherRectangle();
+?>

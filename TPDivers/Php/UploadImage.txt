@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP27</title>
+</head>
+<body>
+    <?php
+            if(isset($_POST["Envoyer"]))
+            {
+                $nomFichier = $_FILES["file"]["name"];
+                $posDot = strrpos($nomFichier, '.');
+                $ext = substr($nomFichier, $posDot);
+                if($nomFichier == '')
+                    echo "Aucun fichier envoyé";
+                else if($ext === '.jpg' || $ext === '.gif' || $ext === '.png')
+                    echo $nomFichier;
+                else
+                    echo "L'image doit porter l'extention jpg, gif ou png";
+            }
+            else
+            {
+                echo "<form action='TP27.php' method='POST' enctype='multipart/form-data'>
+                <label for='file'>Fichier à télécharger : </label>
+                <input type='file' name='file'>
+                <br>
+                <input type='submit' name='Envoyer'>
+                </form>";
+            }
+    ?>
+</body>
+</html>

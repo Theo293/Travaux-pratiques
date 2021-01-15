@@ -1,0 +1,112 @@
+.RowUn {
+    height: 150px;
+}
+
+.RowDeux {
+    height: 690px;
+}
+
+.Image {
+    height: 150px;
+    background-image: url("images.jfif");
+}
+
+input {
+    margin: 30px;
+}
+
+label {
+    display: inline-block;
+}
+
+input, .Border {
+    border: 2px solid #f3f3f7;
+}
+
+.message {
+    height: 100px;
+    width: 450px;
+}
+
+div label {
+    width: 70%;
+}
+
+.textAlignL {
+    text-align: left;
+}
+
+.textAlign {
+    text-align: right;
+}
+
+.Coord {
+    height: 27%;
+    position: relative;
+    right: 50px;
+    top: 40px;
+    padding: 15px;
+}
+
+.FooterHeight {
+    height: 79px;
+    background-color: #D1BCC6;
+}
+
+h2, p, label {
+    font-family: "Open Sans";
+}
+
+h1 {
+    font-family: roboto;
+    font-weight: bold;
+}
+
+li {
+    margin: 10px;
+}
+
+#Focus {
+    background-color: #B6CED1;
+    border-radius: 14px;
+}
+
+@media screen and (max-width: 771px)
+{
+    .textAlignL {
+        text-align: center;
+    }
+
+    .textAlign {
+        text-align: center;
+    }
+
+    .message {
+        position: relative;
+        right: 10px;
+    }
+
+    .RowDeux {
+        height: 840px;
+    }
+
+    input {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 576px)
+{
+    .Coord {
+        height: 15%;
+        top: 5px;
+        width: 400px;
+        left: 47px;
+    }
+
+    
+    .FooterHeight {
+        height: 100%;
+        background-color: #D2F2EA;
+    }
+}

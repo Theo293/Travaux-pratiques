@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP21</title>
+</head>
+<body>
+    <?php
+        $chaine = ""; $nb = 3890; $i = 0; $position = 0;
+
+        while ($nb > 0)
+        {
+            $i++;
+            if(($nb - 1000) >= 0)
+            {
+                $chaine .= "M";
+                $nb -= 1000;
+            }
+            else if(($nb - 500) >= 0)
+            {
+                $chaine .= "D";
+                $nb -= 500;
+            }
+            else if(($nb - 100) >= 0)
+            {
+                $chaine .= "C";
+                $nb -= 100;
+            }
+            else if(($nb - 50) >= 0)
+            {
+                $chaine .= "L";
+                $nb -= 50;
+            }
+            else if(($nb - 10) >= 0)
+            {
+                $chaine .= "X";
+                $nb -= 10;
+            }
+            else if(($nb - 5) >= 0)
+            {
+                $chaine .= "V";
+                $nb -= 5;
+            }
+            else if(($nb - 1) >= 0)
+            {
+                $chaine .= "I";
+                $nb -= 1;
+            }
+
+        if(strpos($chaine, "XXXX") !== false)
+        {
+            $chaine = str_replace("LXXXX", "XC", $chaine);
+        }
+        else if(strpos($chaine, "XXXX") !== false)
+        {
+            $chaine = str_replace("XXXX", "XL", $chaine);
+        }
+        else if(strpos($chaine, "VIIII") !== false)
+        {
+            $chaine = str_replace("VIIII", "IX", $chaine);
+        }
+        else if(strpos($chaine, "IIII") !== false)
+        {
+            $chaine = str_replace("IIII", "IV", $chaine);
+        }
+        else if(strpos($chaine, "DCCCC") !== false)
+        {
+            $chaine = str_replace("DCCCC", "CM", $chaine);
+        }
+        else if(strpos($chaine, "CCCC") !== false)
+        {
+            $chaine = str_replace("CCCC", "CD", $chaine);
+        }
+        }
+        echo $chaine;
+    ?>
+</body>
+</html>

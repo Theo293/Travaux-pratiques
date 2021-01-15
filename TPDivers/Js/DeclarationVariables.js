@@ -1,0 +1,14 @@
+let num1 = 15, num2 = 3, b1 = true, b2 = false;
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
+console.log(num1 % num2);
+console.log(num1 > num2);
+console.log(num1 < num2);
+console.log(num1 == num2);
+console.log(num2 != num2);
+console.log(b1 && b2);
+console.log(b1 || b2);
+console.log(!b1);
+console.log(!b2);

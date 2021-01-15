@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP06</title>
+</head>
+<body>
+    <?php
+        $x = 15;
+        $y = 4;
+        $z = -123;
+        $a = $x/$y;
+        $b = $y/$z;
+        $c = $x/$z;
+        echo "15/4 = $a";
+        echo "<br>";
+        echo "4/-123 = $b";
+        echo "<br>";
+        echo "15/-123 = $c";
+    ?>
+</body>
+</html>

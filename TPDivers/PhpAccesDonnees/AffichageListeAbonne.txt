@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP05</title>
+</head>
+<body>
+    <?php
+        $nom; $prenom; $id;
+        // Connexion avec la base de données
+        $connexion = new mysqli('localhost', 'root', '', 'Données', '3306');
+        // Vérification du succès de la commande 'mysqli'
+        if($connexion->connect_error)
+        {
+            echo "Erreur lors de la connexion avec la base de données";
+            die;
+        }
+        // Préparation de la requête SELECT
+        $requete = $connexion->prepare('SELECT id, prenom, nom FROM abonne LIMIT 200');
+        // Execution de la requête
+        $requete->execute();
+        // Affichage des noms et prenoms des 200 premiers abonnés
+        $requete->bind_result($id, $prenom, $nom);
+        echo "Résultat :<br>"; 
+        while($requete->fetch())
+            echo $id . " " . $nom . " " . $prenom . "<br>";
+    ?>
+</body>
+</html>

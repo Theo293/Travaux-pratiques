@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP04</title>
+</head>
+<body>
+    <?php
+            $nom = ""; $prenom = ""; $dateNaissance = "";
+            $ville = ""; $abonneId = ""; $adresse = ""; 
+            $codePostal = ""; $dateI = ""; $dateF = "";
+            if(isset($_POST['nom']) && isset($_POST['id']))
+            {
+                $nom = $_POST['nom']; $prenom = $_POST['prenom']; $dateNaissance = $_POST['date_naissance'];
+                $ville = $_POST['ville']; $abonneId = $_POST['id']; $adresse = $_POST['adresse']; 
+                $codePostal = $_POST['code_postal']; $dateI = $_POST['dateI']; $dateF = $_POST['dateF'];
+                // Connexion avec la base de données
+                $connexion = new mysqli('localhost', 'root', '', 'Données', '3306');
+                // Vérification du succès de la commande 'mysqli'
+                if($connexion->connect_error)
+                {
+                    echo "Erreur lors de la connexion avec la base de données";
+                    die;
+                }
+                // Passe en insertion si aucun id n'a été renseigné
+                if($abonneId < 1)
+                {
+                    $resultat = $connexion->query('INSERT INTO abonne (prenom, nom, date_naissance, adresse,
+                    code_postal, ville, date_inscription, date_fin_abo) VALUES ("' . $prenom . '", "' . $nom .
+                    '", ' . $dateNaissance . ', "' . $adresse . '", ' . $codePostal . ', "' . $ville . '", ' .
+                    $dateI . ', ' . $dateF . ');');
+                    if($resultat === false)
+                    {
+                        echo "Erreur lors de l'insertion d'un nouvel abonné";
+                        die;
+                    }
+                    echo "Insertion d'un nouvel abonné réussie";
+                }
+                // Mode mise à jour si un id a été renseigné
+                else
+                {
+                    $resultat = $connexion->query('UPDATE abonne SET nom="' . $nom . '", prenom="' . $prenom . 
+                    '", date_naissance="' . $dateNaissance . '", ville="' . $ville . '", adresse="' . $adresse .
+                    '", code_postal="' . $codePostal . '", date_inscription="' . $dateI . '", date_fin_abo="' .
+                    $dateF . '" WHERE id=' . $abonneId .
+                    ';');
+                    // Vérification du succès de la commande '$connexion->query'
+                    if($resultat === false)
+                    {
+                        echo "Erreur lors de la mise à jour de la base de données";
+                        die;
+                    }
+                    // Indique si l'update de la base de données a réussie
+                    echo "Mise à jour de l'abonné portant l'id " . $abonneId . " réussie";
+                }
+            }
+    ?>
+                <!-- Affichage du formulaire -->
+                <form action='TP04.php' method='POST'>
+                <label for='id'>Id : </label>
+                <input type='number' name='id' id='id' value="<?=$abonneId?>">
+                <br>
+                <label for='nom'>Nom : </label>
+                <input type='text' name='nom' id='nom' value="<?=$nom?>">
+                <br>
+                <label for='prenom'>Prénom : </label>
+                <input type='text' name='prenom' id='prenom' value="<?=$prenom?>">
+                <br>
+                <label for='date_naissance'>Date de naissance : </label>
+                <input type='date' name='date_naissance' id='date_naissance' value="<?=$dateNaissance?>">
+                <br>
+                <label for='adresse'>Adresse : </label>
+                <input type='text' name='adresse' id='adresse' value="<?=$adresse?>">
+                <br>
+                <label for='ville'>Ville : </label>
+                <input type='text' name='ville' id='ville' value="<?=$ville?>">
+                <br>
+                <label for='code_postal'>Code Postal : </label>
+                <input type='number' name='code_postal' id='code_postal' value="<?=$codePostal?>">
+                <br>
+                <label for='dateI'>Date d'inscription : </label>
+                <input type='date' name='dateI' id='dateI' value="<?=$dateI?>">
+                <br>
+                <label for='dateF'>Date de fin de l'abonnement : </label>
+                <input type='date' name='dateF' id='dateF' value="<?=$dateF?>">
+                <br>
+                <input type='submit' value='Valider'>
+                </form>
+</body>
+</html>

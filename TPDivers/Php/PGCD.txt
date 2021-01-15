@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP15</title>
+</head>
+<body>
+    <?php
+        $nb1 = rand(1, 100); $nb2 = rand(1, 100);
+        $i = 0;
+        $nb1 > $nb2 ? $i = $nb2 : $i = $nb1;
+        for(; $i >= 1 ; $i--)
+            if($nb1 % $i == 0 && $nb2 % $i == 0)
+            {
+                echo "Le PGCD de $nb1 et $nb2 est $i";
+                break;
+            }
+    ?>
+</body>
+</html>

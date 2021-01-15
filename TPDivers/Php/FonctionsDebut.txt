@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP17</title>
+</head>
+<body>
+    <?php
+        function nombrePremier ($nb){
+
+            $Booleen = true; $cp = 0;
+
+            for($i = 2 ; $i < $nb ; $i++)
+            {
+                for($u = 2 ; $u < $i ; $u++)
+                    if($i % $u == 0)
+                        $Booleen = false;
+                if($Booleen)
+                {
+                    $cp++;
+                    echo "$i ";
+                }
+
+                $Booleen = true;
+            }
+
+            return $cp;
+        }
+
+        $nombre = rand(1, 1000); $compteur = 0;
+
+        $compteur = nombrePremier($nombre);
+
+        if($compteur > 1)
+            echo "<br>La valeur $nombre a $compteur nombres premiers";
+        else if($compteur <= 1)
+            echo "<br>La valeur $nombre a $compteur nombre premier";
+
+    ?>
+</body>
+</html>

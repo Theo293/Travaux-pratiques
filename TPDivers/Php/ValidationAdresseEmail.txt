@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP20</title>
+</head>
+<body>
+    <?php
+        function validationMail($mail)
+        {
+            $position = 0; $alphaN ="abcdefghijklmnopqrstuvwxyz0123456789._-@";
+            
+            $position = strrpos($mail, '.');
+
+            if(!strpos($mail, '@'))
+                return false;
+            else if(!strpos($mail, '.'))
+                return false;
+            else if(strlen(substr($mail, $position + 1)) < 2)
+                return false;
+            else if(substr_count($mail, '@') > 1)
+                return false;
+
+            for($i = 0 ; $i < strlen($mail) ; $i++)
+                if(strpos($alphaN, $mail[$i]) === false)
+                    return false;
+
+
+            return true;
+        }
+
+        $m = "theomathias@gmail.com"; $res = false;
+
+        $res = validationMail($m);
+
+        if($res)
+            echo "$m : Ok";
+        else
+            echo "$m : Incorrect";
+    ?>
+</body>
+</html>

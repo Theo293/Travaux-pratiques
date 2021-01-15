@@ -1,0 +1,366 @@
+.colorH2 {
+    color: #76A846;
+    font-size: 400%;
+    bottom: 170px;
+    position: relative;
+    font-family: 'before_the_rainregular';
+    left: 5%;
+}
+
+.ImageTitre {
+    background-image: url("Images/Captured_ecran2020-06-04a15.52.30_1800x1800.png");
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+}
+
+.Bold {
+    font-weight: bold;
+    bottom: 180px;
+    position: relative;
+    left: 10px;
+    font-size: 20px;
+}
+
+.margin {
+    margin: 70px auto;
+}
+
+span, h4 {
+    font-weight: bold;
+    color: #76A846;
+}
+
+.size {
+    font-size: 30px;
+}
+
+.imageCuisine {
+    background-image: url("Images/Diseño-de-cocina-para-restaurante.jpg");
+    position: relative;
+    left: 7px;
+}
+
+.imageSalle {
+    background-image: url("Images/La-salle-du-restaurant-gastronomique_dr.jpg");
+}
+
+.imageCave {
+    background-image: url("Images/restaurant-christophe.jpg");
+    position: relative;
+    right: 7px;
+}
+
+.imageTerasse {
+    background-image: url("Images/EBJKGIEC4CD5YJ2YE76IYQLTVI.jpg");
+    position: relative;
+    left: 7px;
+}
+
+.imageBar {
+    background-image: url("Images/sortir-bar-vins-bordeaux-le-bouscat.jpg");
+}
+
+.imageBillard {
+    background-image: url("Images/salle_billard_06.jpg");
+    position: relative;
+    right: 7px;
+}
+
+.imageCuisine, .imageSalle, .imageCave, .imageTerasse, .imageBar, .imageBillard {
+    height: 440px;
+    width: 31%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 25px;
+}
+
+.conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.backgroundImage:hover {
+    animation-name: colorBackground;
+    animation-duration: 0.3s;
+    color: white;
+    animation-fill-mode: forwards;
+}
+
+h3 {
+    position: relative;
+    top: 400px;
+}
+
+.imagePlat {
+    background-image: url("Images/Plat.PNG");
+    height: 350px;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.histoire {
+    padding: 21px 0px 21px 21px;
+    margin-top: 100px;
+}
+
+.Galerie {
+    background-color: rgb(246,249,250);
+    padding-top: 21px;
+}
+
+h4 + p {
+    position: relative;
+    top: 30px;
+}
+
+.taille {
+    height: 215px;
+}
+
+.ligne {
+    height: 1px;
+    border: 1px solid gray;
+    position: absolute;
+    left: 9%;
+    margin-top: 70px;
+}
+
+.text {
+    position: relative;
+    left: 0%;
+    margin-top: 20px;
+    margin-left: 21Px;
+}
+
+.cGauche {
+    height: 700px;
+    background-color: rgb(118,168,70);
+    color: white;
+    font-weight: bold;
+}
+
+.cDroite {
+    background-color: rgb(246,249,250);
+    height: 700px;
+    color: rgb(118,168,70);
+    font-weight: bold;
+}
+
+.basDePage {
+    margin-top: 20px;
+}
+
+.cGauche1 {
+    position: relative;
+    top: 110px;
+    font-size: 17px;
+}
+
+h6 {
+    position: relative;
+    font-size: 20px;
+    background-color: white;
+    width: 260px;
+    margin: 0px auto;
+    height: 50px;
+    top: 10px;
+}
+
+#positionC {
+    left: 0px;
+    color: rgb(118,168,70);
+    font-weight: bold;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 9px;
+}
+
+.ligne2 {
+    width: 70%;
+    height: 1px;
+    border: 1px solid gray;
+    position: relative;
+    top: 175px;
+    left: 15%;
+}
+
+.cGauche2 {
+    position: relative;
+    top: 32%;
+    font-size: 17px;
+}
+
+.motDeFin {
+    width: 70%;
+    margin: 0px auto;
+    position: relative;
+    top: 150px;
+}
+
+.espace {
+    margin-bottom: 60px;
+}
+
+#backGreen {
+    background-color: rgb(118,168,70);
+    color: white;
+}
+
+#backGreen:hover {
+    background-color: rgb(235,164,35);
+    opacity: 0.9;
+}
+
+.white {
+    color: white;
+}
+
+.white:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#position {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    padding-top: 9px;
+    padding-left: 49px;
+    margin: 0px;
+    left: 0;
+}
+
+.SurvolBack:hover {
+    background-color: rgb(235,164,35);
+    opacity: 0.9;
+}
+
+#positionC:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.fontHistoire {
+    text-align: center;
+    font-family: 'before_the_rainregular';
+}
+
+.colorParagraphe {
+    color: rgba(0, 0, 0, 0.884);
+    font-weight: 500;
+}
+
+@keyframes colorBackground{
+    0% {
+
+    }
+
+    100% {
+        background-color: rgb(236 ,167 ,35 , 0.5);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 976px)
+{
+    .imageCuisine, .imageSalle, .imageCave, .imageTerasse, .imageBar, .imageBillard {
+        width: 47%;
+        left: 0px;
+        right: 0px;
+    }
+
+    .espace {
+        margin-bottom: 0px;
+    }
+
+    .titreSize {
+        font-weight: bold;
+    }
+
+    .motDeFin {
+        top: 40px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .colorH2 {
+        bottom: 200px;
+        margin: 0px auto;
+        width: 350px;
+    }
+
+    .Bold {
+        bottom: 200px;
+        margin: 0px auto;
+        width: 300px;
+    }
+
+    .motDeFin {
+        top: 70px;
+    }
+}
+
+@media screen and (max-width: 576px)
+{
+    .imageCuisine, .imageSalle, .imageCave, .imageTerasse, .imageBar, .imageBillard {
+        width: 96%;
+        left: 0px;
+        right: 0px;
+    }
+
+    .espace {
+        margin-bottom: 60px;
+    }
+
+    .taille {
+        height: 270px;
+    }
+
+    .motDeFin {
+        top: 70px;
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+    .taille {
+        height: 400px;
+    }
+
+    .cGauche1 {
+        top: 50px;
+    }
+
+    .ligne2 {
+        top: 140px;
+    }
+
+    .cGauche2 {
+        top: 25%;
+    }
+
+    .motDeFin {
+        width: 90%;
+        top: 30px;
+    }
+
+    .colorH2 {
+        font-size: 300%;
+    }
+
+    .Bold {
+        font-size: 95%;
+    }
+}
